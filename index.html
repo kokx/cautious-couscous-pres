@@ -53,17 +53,31 @@
                                 <li class="fragment">With wrong information to catch traitors</li>
                             </ul>
                         </li>
-                        <li class="fragment">Shared folder with secret documents</li>
+                        <li class="fragment">A server that is attractive to hackers
+                            <ul>
+                                <li class="fragment">To learn their new hat tricks</li>
+                            </ul>
+
+						</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Honeypot detection</h2>
+                    <h2>But they need to be believable…</h2>
                     <ul>
-                        <li>Check file metadata</li>
+                        <li>Attackers can check file metadata</li>
                         <li>Is the metadata consistent with normal file usage?</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Our project</h2>
+                    <ul>
+                        Generating believable file useage <br>
+						That is, making a fake folder appear real and used.
+					</ul>
+                </section>
+
 
                 <section>
                     <h2>Literature</h2>
@@ -71,15 +85,36 @@
                         We were not able to find work on believable file usage.
                     </p>
                     <p>
-                        There is literature on detecting honeypots
+                        There is literature honeypots in general
 
                         <ul>
-                            <li>http://old.honeynet.org/papers/individual/DefeatingHPs-IAW05.pdf</li>
-                            <li>http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1027&context=adf</li>
+                            <li>Proactive Detection of Security Incidents [enisa, 2012] (181 pages!) </li>
+                            <li>Recent Advances and Future Trends in Honeypot Research [Bringer et al., 2012] </li>
                         </ul>
 
-                        However, all of these methods need to be able to execute programs on the machine. They don't look at file usage at all.
-                    </p>
+                    <aside class="notes">
+                        Almost no literature. So, we have to come up with our own approach here.
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>Literature (contd.)</h2>
+
+						As well as ways of detecting them
+
+                        <ul>
+                            <li>Defeating Honeypots [Holz et al., 2005]
+<!-- http://old.honeynet.org/papers/individual/DefeatingHPs-IAW05.pdf --></li>
+                            <li>How do you know when you are inside one? [Innes, 2006]
+<!-- http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1027&context=adf --></li>
+                        </ul>
+
+						But these are actually quite old. </br>
+
+						We have thus come up with a new solution.
+
+                  </p>
                     <aside class="notes">
                         Almost no literature. So, we have to come up with our own approach here.
                     </aside>
