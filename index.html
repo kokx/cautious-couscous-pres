@@ -31,6 +31,13 @@
                 </section>
 
                 <section>
+                    <h2>Honeypot generator</h2>
+                    <p>
+                        A project by <strong>Bor de Kock</strong>, <strong>Pieter Kokx</strong> and <strong>Ylona Meeuwenberg</strong>
+                    </p>
+                </section>
+
+                <section>
                     <h2>What is a honeypot?</h2>
                     <aside class="notes">
                         Honeypot is a computer system that is setup as a decoy
@@ -59,9 +66,30 @@
                 </section>
 
                 <section>
-                    <h2>Our project</h2>
+                    <h2>Literature</h2>
+                    <p>
+                        We were not able to find work on believable file usage.
+                    </p>
+                    <p>
+                        There is literature on detecting honeypots
+
+                        <ul>
+                            <li>http://old.honeynet.org/papers/individual/DefeatingHPs-IAW05.pdf</li>
+                            <li>http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1027&context=adf</li>
+                        </ul>
+
+                        However, all of these methods need to be able to execute programs on the machine. They don't look at file usage at all.
+                    </p>
+                    <aside class="notes">
+                        Almost no literature. So, we have to come up with our own approach here.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Approach</h2>
                     <ul>
-                        <li>Creating an analysis method for file usage metadata</li>
+                        <li>Analyse existing file metadata and generate a definition of believable file usage from there.</li>
+                        <li>Apply this knowledge to manipulate files.</li>
                     </ul>
                 </section>
 
@@ -90,15 +118,27 @@
                 <section>
                     <h2>Variables to analyze</h2>
                     <ul>
-                        <li>Filename</li>
+                        <li>Filename (full path)</li>
                         <li>MIME-type (determined with magic)</li>
+                        <li>Filesize</li>
+                        <li>Last modified date (looking at commit history)</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>Results ... so far</h2>
+                    <h2>Evaluation</h2>
                 </section>
 
+                <section>
+                    <h2>Results</h2>
+                    <p>
+                        TODO
+                    </p>
+                </section>
+
+                <section>
+                    <h1>Questions?</h1>
+                </section>
             </div>
         </div>
 
@@ -109,6 +149,7 @@
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
+                controls: false,
 
                 // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
